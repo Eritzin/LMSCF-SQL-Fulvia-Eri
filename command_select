@@ -1,0 +1,5 @@
+SELECT owner.name, book.title, present.name 
+FROM `owner` 
+INNER JOIN `book` ON owner.owner_id = book.owner_id 
+INNER JOIN `origin` ON book.origin_id = origin.origin_id 
+INNER JOIN `present` ON origin.present_id = present.present_id;
